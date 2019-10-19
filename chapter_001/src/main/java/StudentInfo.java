@@ -2,7 +2,7 @@ public class StudentInfo {
     public static void main(String[] args) {
         System.out.println("Evgeny Vatyutov");
         System.out.println("02.10.1988");
-        //System.out.println("10 > 9 равно " + 10 > 9);
+        ///////System.out.println("10 > 9 равно " + 10 > 9);
         //Sint a,b = 1;
 //        byte b = 50;
 //        b = b * 2b;

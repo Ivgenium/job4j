@@ -17,12 +17,17 @@ public class SqMaxTest {
     }
     @Test
     public void whenMaxThird() {
-        int result = SqMax.max(1, 2, 4, 3);
-        assertThat(result, is(4));
+        int result = SqMax.max(4, 3, 5, 1);
+        assertThat(result, is(5));
     }
     @Test
     public void whenMaxFourth() {
         int result = SqMax.max(1, 2, 3, 4);
         assertThat(result, is(4));
+    }
+    @Test
+    public void whenAllNumbersAreEqual() {
+        int result = SqMax.max(1, 1, 1, 1);
+        assertThat(result, is(1));
     }
 }

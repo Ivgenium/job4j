@@ -6,8 +6,12 @@ public class MatrixCheck {
         for (int row = 0; row < board.length; row++) {
             int counterCell = 0, counterRow = 0;
             for (int cell = 0; cell < board.length; cell++) {
-                if (board[row][cell] == 'X') counterRow++;
-                if (board[cell][row] == 'X') counterCell++;
+                if (board[row][cell] == 'X') {
+                    counterRow++;
+                }
+                if (board[cell][row] == 'X') {
+                    counterCell++;
+                }
             }
             if (counterRow == 5 || counterCell == 5) {
                 result = true;

@@ -3,9 +3,10 @@ package ru.job4j.array;
 public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
-        for (int row = 0; row < board.length; row++) {
+        int arrayLength = board.length;
+        for (int row = 0; row < arrayLength; row++) {
             int counterCell = 0, counterRow = 0;
-            for (int cell = 0; cell < board.length; cell++) {
+            for (int cell = 0; cell < arrayLength; cell++) {
                 if (board[row][cell] == 'X') {
                     counterRow++;
                 }
@@ -13,7 +14,7 @@ public class MatrixCheck {
                     counterCell++;
                 }
             }
-            if (counterRow == 5 || counterCell == 5) {
+            if (counterRow == arrayLength || counterCell == arrayLength) {
                 result = true;
                 break;
             }

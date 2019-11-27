@@ -6,17 +6,17 @@ public class Merge {
 
     public int[] merge(int[] left, int[] right) {
         int[] rsl = new int[left.length + right.length];
-        int i = 0, k = 0 , j = 0;
-        while (i < rsl.length) {
-            if (k < left.length && (j >= right.length || left[k] < right[j])) {
-                rsl[i] = left[k++];
-            }   else if (j < right.length && (k >= left.length || right[j] < left[k])) {
-                rsl[i] = right[j++];
-            }   else if (k < left.length && j < right.length && left[k] == right[j]) {
-                rsl[i++] = left[k++];
-                rsl[i] = right[j++];
+        int rslCurrentIndex = 0, leftCurrentIndex = 0 , rightCurrentIndex = 0;
+        while (rslCurrentIndex < rsl.length) {
+            if (leftCurrentIndex < left.length && (rightCurrentIndex >= right.length || left[leftCurrentIndex] < right[rightCurrentIndex])) {
+                rsl[rslCurrentIndex] = left[leftCurrentIndex++];
+            }   else if (rightCurrentIndex < right.length && (leftCurrentIndex >= left.length || right[rightCurrentIndex] < left[leftCurrentIndex])) {
+                rsl[rslCurrentIndex] = right[rightCurrentIndex++];
+            }   else if (leftCurrentIndex < left.length && rightCurrentIndex < right.length && left[leftCurrentIndex] == right[rightCurrentIndex]) {
+                rsl[rslCurrentIndex++] = left[leftCurrentIndex++];
+                rsl[rslCurrentIndex] = right[rightCurrentIndex++];
             }
-            i++;
+            rslCurrentIndex++;
         }
         return rsl;
     }

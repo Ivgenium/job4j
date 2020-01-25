@@ -2,11 +2,6 @@ public class StudentInfo {
     public static void main(String[] args) {
         System.out.println("Evgeny Vatyutov");
         System.out.println("02.10.1988");
-        ///////System.out.println("10 > 9 равно " + 10 > 9);
-        //Sint a,b = 1;
-//        byte b = 50;
-//        b = b * 2b;
-
         // возраст
         byte age = 30;
         // пол мужской 'm', женский 'f'
@@ -25,8 +20,6 @@ public class StudentInfo {
         boolean workPermit = false;
         // размер файла, максимальный размер NTFS в Кбайт
         long fileSize = 18014398509481984L;
-
         System.out.println("02.10.1988");
-
     }
 }

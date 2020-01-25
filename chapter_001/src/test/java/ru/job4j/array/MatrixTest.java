@@ -15,7 +15,6 @@ public class MatrixTest {
         };
         assertThat(table, is(expect));
     }
-
     @Test
     public void when5on5() {
         Matrix matrix = new Matrix();

@@ -5,7 +5,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class DummyBotTest {
-
     @Test
     public void whenGreetBot() {
         assertThat(
@@ -13,7 +12,6 @@ public class DummyBotTest {
                 is("Привет, умник.")
         );
     }
-
     @Test
     public void whenByeBot() {
         assertThat(
@@ -21,7 +19,6 @@ public class DummyBotTest {
                 is("До скорой встречи.")
         );
     }
-
     @Test
     public void whenUnknownBot() {
         assertThat(
@@ -29,5 +26,4 @@ public class DummyBotTest {
                 is("Это ставит меня в тупик. Задайте другой вопрос.")
         );
     }
-
 }

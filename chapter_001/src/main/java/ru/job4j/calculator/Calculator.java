@@ -1,7 +1,4 @@
 package ru.job4j.calculator;
-
-import java.sql.SQLOutput;
-
 /**
  * Class Класс для вычисления арифметических операций + - * /
  *
@@ -10,7 +7,6 @@ import java.sql.SQLOutput;
  * @version 1
  */
 public class Calculator {
-
     /**
      * Сложение
      *
@@ -22,7 +18,6 @@ public class Calculator {
         double result = first + second;
         System.out.println(first + " + " + second + " = " + result);
     }
-
     /**
      * Вычитание
      *
@@ -34,7 +29,6 @@ public class Calculator {
         double result = first / second;
         System.out.println(first + " / " + second + " = " + result);
     }
-
     /**
      * Умножение
      *
@@ -46,7 +40,6 @@ public class Calculator {
         double result = first * second;
         System.out.println(first + " * " + second + " = " + result);
     }
-
     /**
      * Деление
      *
@@ -58,7 +51,6 @@ public class Calculator {
         double result = first - second;
         System.out.println(first + " - " + second + " = " + result);
     }
-
     public static void main(String[] args) {
         add(1, 1);
         div(4, 2);

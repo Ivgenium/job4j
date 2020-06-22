@@ -12,16 +12,16 @@ public class Triangle {
         this.third = cp;
     }
     /**
-     * Метод вычисления периметра по длинам сторон.
+     * Метод вычисления полупериметра по длинам сторон.
      *
      * Формула.
      *
      * (a + b + c)
      *
-     * @return Периметр.
+     * @return Полупериметр.
      */
-    public double period() {
-        return first.distance(second) + second.distance(third) + third.distance(first);
+    public double period(double a, double b, double c) {
+        return (a + b + c) / 2;
     }
     /**
      * Метод должен вычислить площадь треугольника.
@@ -39,7 +39,7 @@ public class Triangle {
         double a = first.distance(second);
         double b = second.distance(third);
         double c = third.distance(first);
-        double p = this.period() / 2;
+        double p = period(a, b, c);
         if (this.exist(a, b, c)) {
             rsl = sqrt(p * (p - a) * (p - b) * (p - c));
         }

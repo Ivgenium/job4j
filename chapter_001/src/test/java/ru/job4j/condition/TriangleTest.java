@@ -9,9 +9,12 @@ public class TriangleTest {
         Point a = new Point(2, -1);
         Point b = new Point(-1, 3);
         Point c = new Point(2, 7);
-        double expected = 18;
+        double expected = 9;
         Triangle test = new Triangle(a, b, c);
-        double out = test.period();
+        double ab = a.distance(b);
+        double bc = b.distance(c);
+        double ca = c.distance(a);
+        double out = test.period(ab, bc, ca);
         Assert.assertEquals(expected, out, 0.01);
     }
     @Test

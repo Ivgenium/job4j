@@ -30,4 +30,9 @@ public class MaxTest {
         int result = Max.max(6, 2, 4);
         assertThat(result, is(6));
     }
+    @Test
+    public void whenMax10To11To3To7Then11() {
+        int result = Max.max(10, 11, 3, 7);
+        assertThat(result, is(11));
+    }
 }

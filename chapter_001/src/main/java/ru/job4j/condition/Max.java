@@ -5,7 +5,9 @@ public class Max {
         return left > right ? left : right;
     }
     public static int max(int a, int b, int c) {
-        int p = max(a, b);
-        return max(p, c);
+        return max(max(a, b), c);
+    }
+    public static int max(int a, int b, int c, int d) {
+        return max(max(max(a, b), c), d);
     }
 }

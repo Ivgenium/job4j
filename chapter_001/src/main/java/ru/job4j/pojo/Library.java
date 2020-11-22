@@ -16,11 +16,16 @@ public class Library {
         books[3] = cleanCode;
         books[0] = relationalDataModels;
         showBookList(books);
+        System.out.println("\nOutput of books named \"Clean code\"");
+        for (Book book : books) {
+            if (book.equals(cleanCode)) {
+                System.out.println(book.getName() + " - " + book.getNumberOfPages());
+            }
+        }
     }
     public static void showBookList(Book[] books){
         System.out.println("Show book list");
-        for (int index = 0; index < books.length; index++) {
-            Book book = books[index];
+        for (Book book : books) {
             System.out.println(book.getName() + " - " + book.getNumberOfPages());
         }
     }
